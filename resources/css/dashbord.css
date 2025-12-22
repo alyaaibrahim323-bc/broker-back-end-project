@@ -1,0 +1,83 @@
+/* Sidebar: Make it full height and ensure it stays fixed */
+#sidebar-wrapper {
+    block-size: 100vh;
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 250px;
+}
+
+/* Styling for the sidebar heading (Dashboard) */
+.sidebar-heading {
+    background-color: #343a40; /* Darker shade */
+    color: #fff; /* White text */
+    padding: 15px; /* Add padding for spacing */
+    text-align: center; /* Center the text */
+    font-weight: bold; /* Make the text bold */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+}
+
+/* Add some space on top of the navbar */
+.navbar {
+    margin-block-start: 20px;
+}
+
+/* Ensure the page content has the proper margin to account for the sidebar */
+#page-content-wrapper {
+    margin-inline-start: 250px; /* Equal to the sidebar width */
+    padding: 20px;
+}
+
+/* Styling for the sidebar items */
+.list-group-item {
+    border: none; /* Remove borders between items */
+}
+/* Styles for Dashboard Cards */
+.card {
+    border-radius: 10px; /* Rounded corners for the card */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.text-xs {
+    font-size: 0.8rem; /* Smaller font size for labels */
+}
+
+.h5 {
+    font-size: 1.5rem; /* Font size for the value */
+    font-weight: bold; /* Make the value bold */
+}
+
+.border-left-primary {
+    border-inline-start: 4px solid #007bff; /* Blue left border */
+}
+
+.border-left-success {
+    border-inline-start: 4px solid #28a745; /* Green left border */
+}
+
+.text-gray-800 {
+    color: #343a40; /* Dark gray color for text */
+}
+/* Styles for buttons in the navbar */
+.navbar .nav-link {
+    color: #007bff; /* Change text color for links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    padding: 10px 15px; /* Padding for buttons */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.navbar .nav-link:hover {
+    background-color: #e7f0ff; /* Light blue background on hover */
+    color: #0056b3; /* Darker blue text on hover */
+}
+
+/* Optional: Additional styles for the navbar */
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for a more pronounced effect */
+}
+
+

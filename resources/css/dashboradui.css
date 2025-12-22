@@ -1,0 +1,507 @@
+/* Base styles */
+body {
+    display: flex;
+    min-block-size: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F7F9FB;
+    margin: 0;
+}
+
+/* Sidebar styles */
+/* Sidebar styles */
+.sidebar {
+    inline-size: 220px;
+    padding: 20px;
+    /* background-color: #F7F9FB; */
+    /* border-inline-end: none; */
+    /* border-radius: 15px; */
+}
+
+.sidebar-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin: 15px 0;
+    font-size: 16.39px;
+    color: black;
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+/* Apply styles to remove link appearance */
+.sidebar-menu a {
+    color: inherit; /* Use parent color to blend in */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make the link fill the list item */
+    opacity: inherit; /* Match the opacity of the list item */
+}
+
+/* Hover effect for list items */
+.sidebar-menu li:hover {
+    opacity: 1;
+}
+
+.sidebar-menu li.active {
+    opacity: 1;
+    color: black; /* Active link color */
+    font-weight: 700; /* Optional: make it bold */
+}
+
+
+/* User profile styles */
+.user-profile {
+    text-align: center;
+    margin-block-end: 20px;
+}
+
+.profile-picture {
+    inline-size: 75px;
+    block-size: 75px;
+    background: black;
+    border-radius: 12.68px;    /* الحفاظ على الحواف المنحنية */
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.profile-picture img {
+    inline-size: 100%;
+    block-size: 100%;      /* التأكد من أن الصورة تغطي كامل المساحة */
+    position: absolute;
+    inset-block-start: 0;  /* ضبط الصورة لتكون في منتصف العنصر */
+    inset-inline-start: 0;
+    object-fit: cover;     /* تغطية المساحة دون تشويه الصورة */
+}
+
+
+.user-info {
+    color: black;
+}
+
+.user-name {
+    font-size: 29.27px;
+    font-weight: 600;
+}
+
+.user-email {
+    font-size: 16.59px;
+    opacity: 0.60;
+}
+
+/* Notification badge styles */
+.notification-badge {
+    inline-size: 29.69px;
+    block-size: 30.47px;
+    position: relative;
+    display: inline-block;
+    margin: 10px auto;
+}
+
+.notification-badge .badge-circle {
+    inline-size: 29.69px;
+    block-size: 30.47px;
+    background: #DC3434;
+    border-radius: 9999px;
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+}
+
+.notification-badge .badge-count {
+    position: absolute;
+    inset-inline-start: 10.24px;
+    inset-block-start: 4.20px;
+    color: black;
+    font-size: 12.68px;
+    font-weight: 600;
+}
+
+/* Main content styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f2f5;
+}
+
+.main-content .container-fluid {
+    max-inline-size: 1350px;
+}
+
+/* Card styles */
+.card {
+    inline-size: 100%;
+    block-size: 100%;
+    padding: 26.02px;
+    background: #E3F5FF;
+    border-radius: 17.35px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8.67px;
+    margin-block-end: 20px;
+    text-align: center;
+}
+
+.card h5 {
+    color: black;
+    font-size: 15.18px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 21.68px;
+}
+
+.card p, .card .number {
+    color: #1C1C1C;
+    font-size: 26.02px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    line-height: 39.03px;
+}
+
+.card span {
+    color: #28a745;
+    font-size: 13.01px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 17.35px;
+}
+
+.card .percentage, .card .indicator {
+    display: flex;
+    align-items: center;
+    gap: 8.67px;
+}
+
+.card .indicator div {
+    inline-size: 13.55px;
+    block-size: 8.67px;
+    background: black;
+    position: absolute;
+    inset-inline-start: 1.63px;
+    inset-block-start: 4.34px;
+}
+
+/* Notifications styles */
+.notifications {
+    background-color: #fff;
+    padding: 20px;
+    border-inline-start: 1px solid #ddd;
+    border-radius: 17px;
+}
+
+.notifications h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-block-end: 1rem;
+}
+
+.notifications ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notifications ul li {
+    font-size: 0.9rem;
+    color: #555;
+    margin-block-end: 10px;
+}
+
+.notifications ul li::before {
+    content: "• ";
+    color: #007bff;
+    font-weight: bold;
+}
+
+
+/* Chart container */
+.container {
+    inline-size: 100%;
+    block-size: 100%;
+    padding: 26.02px;
+    background: #ffffff;
+    border-radius: 17.35px;
+    display: flex;
+    flex-direction: column;
+    gap: 17.35px;
+    overflow: hidden;
+}
+
+.container .header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 17.35px;
+}
+
+.container {
+    color: black;
+    font-size: 15.18px;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+}
+
+.chart, .img-fluid {
+    inline-size: 100%;
+    block-size: 266.68px;
+    border-radius: 8.47px;
+}
+
+.legend {
+    display: flex;
+    align-items: center;
+    gap: 8.67px;
+}
+
+.legend div {
+    display: flex;
+    align-items: center;
+}
+
+/* style.css */
+.property-card {
+    border: 1px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-block-end: 20px;
+    padding: 20px;
+}
+.property-card .property-info {
+    display: flex;
+    justify-content: space-between;
+}
+.property-card .property-info h5 {
+    margin: 0;
+}
+.btn-edit, .btn-delete {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff;
+}
+.btn-edit { background-color: #007bff; }
+.btn-delete { background-color: #dc3545; }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* دا كود الconterer الى جوا view developersshow */
+.container1 {
+    inline-size: 170 px;
+    block-size: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+   /* تصميم الزر */
+   .switch {
+    position: relative;
+    inline-size: 8cm;
+    block-size: 1.8cm;
+    background: #F7F7FC;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* زر التحويل */
+.switch input {
+    display: none;
+}
+
+/* شريط التحويل */
+.slider {
+    position: absolute;
+    inline-size: 100%;
+    block-size: 100%;
+    background-color: #080808;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+/* شريط التحويل عند تفعيل الوضع */
+.switch input:checked + .slider {
+    background-color: #F7F7FC;
+}
+
+/* مؤشر التحويل (الزر الذي يتحرك) */
+.slider:before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 4px;
+    inset-block-start: 4px;
+    inline-size: 50%;
+    block-size: 100%;
+    background-color: #0c0c0c;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+/* عند التفعيل يتحرك المؤشر إلى اليمين */
+.switch input:checked + .slider:before {
+    transform: translateX(100%);
+}
+
+/* النص داخل الدائرة */
+.circle-text {
+    position: absolute;
+    font-size: 1.5rem;
+    color: rgb(7, 6, 6);
+    font-weight: bold;
+    inline-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+/* النص داخل الدائرة على اليسار */
+.left-text {
+    inset-inline-start: 20mm;
+    opacity: 1;
+}
+
+/* النص داخل الدائرة على اليمين */
+.right-text {
+    inset-inline-end: 20mm;
+    opacity: 0;
+}
+
+/* عند التفعيل يظهر النص الجهة اليمنى */
+.switch input:checked + .slider ~ .circle-text.left-text {
+    opacity: 0;
+    color: rgb(231, 223, 223);
+
+}
+
+.switch input:checked + .slider ~ .circle-text.right-text {
+    opacity: 1;
+}
+
+/* الأساسيات للألوان */
+.switch .slider {
+    background-color: #F7F7FC; /* اللون الرصاصي */
+}
+
+.switch input:checked + .slider {
+    background-color: #F7F7FC; /* اللون الأسود */
+}
+
+
+
+
+.ads-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* التكرار التلقائي للصور */
+    gap: 20px; /* المسافة بين الصور */
+    padding: 20px;
+}
+
+.ad-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px; /* تحديد زاوية الحواف */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة تأثير الظل */
+    transition: transform 0.3s ease; /* تأثير الحركة عند التمرير */
+}
+
+.ad-item img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover; /* لضبط الصورة داخل الحاوية دون التأثير على الأبعاد */
+    transition: transform 0.3s ease; /* تأثير على الصورة عند التمرير */
+}
+
+/* تأثير عند التمرير على الصورة */
+.ad-item:hover {
+    transform: scale(1.05); /* تكبير الصورة عند التمرير */
+}
+
+.btn-proshoedite, .btn-proshodelet {
+    display: flex;
+    inline-size: 100px; /* عرض الزر */
+    padding: 12px 18px; /* تعديل الحشو الداخلي */
+    justify-content: center; /* محاذاة المحتوى أفقيًا */
+    align-items: center; /* محاذاة المحتوى عموديًا */
+    gap: 6px; /* المسافة بين المحتوى داخل الزر */
+    border-radius: 8.246px; /* الزوايا المدورة */
+    text-align: center;
+}
+
+.btn-proshoedite {
+    background-color: #E7E7E7; /* لون الخلفية لزر Edit */
+    margin-block-end: 10px; /* المسافة بين زر Edit وزر Delete */
+}
+
+.btn-proshodelet {
+    background: #FF6262; /* اللون الخلفي لزر Delete */
+}
+
+.d-flex {
+    gap: 10px; /* إضافة مسافة بين الأزرار */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* إعدادات لجعل الصور تظهر بشكل متجاوب */
+@media (max-width: 768px) {
+    .ads-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* تغير الأعمدة عند الحجم الصغير */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
